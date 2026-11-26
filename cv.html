@@ -231,6 +231,20 @@
       margin-bottom: 2.5px;
     }
 
+    body.bw-mode .cv-header {
+      border-bottom-color: #111827;
+    }
+    body.bw-mode .cv-headline,
+    body.bw-mode h2,
+    body.bw-mode .cv-contact a,
+    body.bw-mode .entry-sub a,
+    body.bw-mode .skills-list a {
+      color: #111827;
+    }
+    body.bw-mode h2 {
+      border-bottom-color: #111827;
+    }
+
     @media print {
       body {
         background: #ffffff;
@@ -254,7 +268,8 @@
     <span><strong>1-Page Recruiter &amp; ATS CV</strong> &mdash; Ready to export (Margins: None, uncheck Headers/Footers).</span>
     <div class="toolbar-actions">
       <a href="index.html" class="btn-back">&larr; Portfolio</a>
-      <button type="button" class="btn-toggle" onclick="document.body.classList.toggle('hide-photo')">Show / Hide Photo</button>
+      <button type="button" class="btn-toggle" onclick="document.body.classList.toggle('hide-photo')">Photo: On / Off</button>
+      <button type="button" class="btn-toggle" onclick="document.body.classList.toggle('bw-mode')">Style: Navy / Harvard B&amp;W</button>
       <button type="button" class="btn-print" onclick="window.print()">Print / Save as PDF</button>
     </div>
   </div>
