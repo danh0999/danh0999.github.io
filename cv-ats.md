@@ -1,11 +1,11 @@
-# DANG DUC ANH
+# ĐẶNG ĐỨC ANH (DANG DUC ANH)
 **Fresher Technical Business Analyst | UI/UX Design & ReactJS Capability**
-Ho Chi Minh City, Vietnam | [FILL IN: Email] | [FILL IN: Phone] | [FILL IN: LinkedIn URL] | https://danh0999.github.io | https://github.com/danh0999
+Ho Chi Minh City, Vietnam | dangducanh999@gmail.com | (+84) 866 896 570 | Portfolio: https://danh0999.github.io | GitHub: https://github.com/danh0999 | PTE Score Report: https://danh0999.github.io/assets/pte-score-report.pdf (Code: 4d26007FND)
 
 ---
 
 ## SUMMARY
-Software Engineering graduate from FPT University (9.4/10 in UI/UX Design) targeting Fresher Technical Business Analyst and product-oriented roles in international environments. Bridges business requirements, user experience modeling, and engineering execution—capable of defining structured business rules, user flows, and use case diagrams, building responsive ReactJS interfaces integrated with RESTful APIs, and validating end-to-end usability through UAT. Strong English proficiency (PTE Academic 60 / IELTS 6.5 equivalent) and cross-cultural exposure in Japan (FJA Academy).
+Software Engineering graduate from FPT University (9.4/10 in UI/UX Design) targeting Fresher Technical Business Analyst and product-oriented roles in international environments. Bridges business requirements, user experience modeling, and engineering execution—capable of defining structured business rules, user flows, and use case diagrams, building responsive ReactJS interfaces integrated with RESTful APIs, and validating end-to-end usability through UAT. Strong English proficiency (PTE Academic 60 — Reading 70, Speaking 64 / IELTS 6.5 equivalent) and 3-month immersion in Japan (FJA Academy).
 
 ---
 
@@ -51,5 +51,6 @@ Software Engineering graduate from FPT University (9.4/10 in UI/UX Design) targe
 ---
 
 ## CERTIFICATIONS & LANGUAGES
-- **Certifications:** PTE Academic – Overall 60 (2026; IELTS 6.5 equivalent); Certificate of Completion in Japanese Language Course – FPT Japan Academy (2024).
+- **PTE Academic – Overall 60** (Reading 70, Speaking 64, Listening 60, Writing 57; IELTS 6.5 equivalent) | Score Report Code: **4d26007FND** (Valid until 02 Nov 2028; verify at https://mypte.pearsonpte.com or https://danh0999.github.io/assets/pte-score-report.pdf).
+- **Certificate of Completion in Japanese Language Course** – FPT Japan Academy (2024).
 - **Languages:** English (Professional Working Proficiency; PTE 60, English-medium IT curriculum) | Japanese (Intermediate coursework B2.1 at FPT University; JLPT N4 equivalent, currently studying for N3).

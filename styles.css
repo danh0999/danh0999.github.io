@@ -276,8 +276,54 @@ code {
   padding: 4.5rem 0 3.75rem;
 }
 
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2.5rem;
+  align-items: center;
+}
+
 .hero-content {
-  max-width: 780px;
+  max-width: 740px;
+}
+
+.hero-portrait-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-portrait {
+  width: 176px;
+  height: 224px;
+  object-fit: cover;
+  object-position: center 18%;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--shadow-md);
+  background: var(--surface);
+}
+
+.cert-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.45rem;
+  font-size: 0.82rem;
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  color: var(--accent);
+  cursor: pointer;
+}
+.link-btn:hover {
+  text-decoration: underline;
 }
 
 .eyebrow {
@@ -1153,6 +1199,18 @@ code {
 /* Responsive Breakpoints
    -------------------------------------------------------------------------- */
 @media (max-width: 960px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+  .hero-portrait-wrap {
+    justify-content: flex-start;
+    order: -1;
+  }
+  .hero-portrait {
+    width: 120px;
+    height: 152px;
+  }
   .metrics-strip,
   .case-meta-grid {
     grid-template-columns: repeat(2, 1fr);

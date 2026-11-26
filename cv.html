@@ -21,8 +21,8 @@
       background: #f3f4f6;
       color: #111827;
       font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
-      font-size: 9.5pt;
-      line-height: 1.38;
+      font-size: 9.4pt;
+      line-height: 1.37;
       -webkit-font-smoothing: antialiased;
     }
 
@@ -31,6 +31,7 @@
       max-width: 210mm;
       margin: 0 auto 16px;
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       gap: 12px;
@@ -43,6 +44,7 @@
 
     .toolbar-actions {
       display: flex;
+      flex-wrap: wrap;
       gap: 8px;
     }
 
@@ -51,16 +53,23 @@
       font-family: inherit;
       font-size: 13px;
       font-weight: 600;
-      padding: 7px 14px;
+      padding: 7px 13px;
       border-radius: 6px;
       text-decoration: none;
       cursor: pointer;
     }
 
-    .btn-back {
+    .btn-back,
+    .btn-toggle {
       color: #374151;
       background: #f9fafb;
       border: 1px solid #d1d5db;
+    }
+
+    .btn-toggle:hover,
+    .btn-back:hover {
+      border-color: #1e3a5f;
+      color: #1e3a5f;
     }
 
     .btn-print {
@@ -79,35 +88,59 @@
       min-height: 297mm;
       margin: 0 auto;
       background: #ffffff;
-      padding: 14mm 16mm;
+      padding: 13mm 15mm;
       box-shadow: 0 6px 24px rgba(17, 24, 39, 0.08);
     }
 
     .cv-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
       border-bottom: 1.5px solid #1e3a5f;
       padding-bottom: 8px;
-      margin-bottom: 10px;
+      margin-bottom: 9px;
+    }
+
+    .cv-header-main {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .cv-avatar {
+      width: 66px;
+      height: 84px;
+      object-fit: cover;
+      object-position: center 18%;
+      border-radius: 5px;
+      border: 1px solid #d1d5db;
+      flex-shrink: 0;
+    }
+
+    body.hide-photo .cv-avatar {
+      display: none;
     }
 
     .cv-name {
       margin: 0;
-      font-size: 19pt;
+      font-size: 18.5pt;
       font-weight: 700;
       letter-spacing: 0.01em;
       color: #111827;
     }
 
     .cv-headline {
-      margin: 2px 0 6px;
-      font-size: 10.5pt;
+      margin: 2px 0 5px;
+      font-size: 10.2pt;
       font-weight: 600;
       color: #1e3a5f;
     }
 
     .cv-contact {
       margin: 0;
-      font-size: 9.2pt;
+      font-size: 9pt;
       color: #374151;
+      line-height: 1.45;
     }
 
     .cv-contact a {
@@ -115,35 +148,31 @@
       text-decoration: none;
     }
 
-    .placeholder {
-      background: #fef3c7;
-      color: #92400e;
-      padding: 0 3px;
-      border-radius: 2px;
-      font-weight: 600;
+    .cv-contact a:hover {
+      text-decoration: underline;
     }
 
     section {
-      margin-bottom: 10px;
+      margin-bottom: 9px;
     }
 
     h2 {
-      font-size: 10.2pt;
+      font-size: 10pt;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.06em;
       color: #1e3a5f;
       border-bottom: 1px solid #d1d5db;
       padding-bottom: 2px;
-      margin: 0 0 6px;
-    }
-
-    p {
       margin: 0 0 5px;
     }
 
+    p {
+      margin: 0 0 4px;
+    }
+
     .entry {
-      margin-bottom: 8px;
+      margin-bottom: 7px;
     }
 
     .entry:last-child {
@@ -160,21 +189,27 @@
     .entry-title {
       font-weight: 700;
       color: #111827;
-      font-size: 10pt;
+      font-size: 9.7pt;
     }
 
     .entry-date {
-      font-size: 9.2pt;
+      font-size: 9pt;
       color: #4b5563;
       white-space: nowrap;
       font-weight: 600;
     }
 
     .entry-sub {
-      font-size: 9.4pt;
+      font-size: 9.1pt;
       color: #374151;
       font-style: italic;
-      margin-bottom: 3px;
+      margin-bottom: 2.5px;
+    }
+
+    .entry-sub a,
+    .skills-list a {
+      color: #1e3a5f;
+      text-decoration: none;
     }
 
     ul {
@@ -183,7 +218,7 @@
     }
 
     li {
-      margin-bottom: 2.5px;
+      margin-bottom: 2px;
     }
 
     .skills-list {
@@ -193,7 +228,7 @@
     }
 
     .skills-list li {
-      margin-bottom: 3px;
+      margin-bottom: 2.5px;
     }
 
     @media print {
@@ -211,19 +246,15 @@
         max-width: none;
         min-height: auto;
       }
-      .placeholder {
-        background: transparent;
-        color: #111827;
-        padding: 0;
-      }
     }
   </style>
 </head>
 <body>
   <div class="toolbar">
-    <span><strong>ATS-Friendly 1-Page CV</strong> &mdash; Replace yellow placeholders in <code>cv.html</code>, then click Print &rarr; Save as PDF.</span>
+    <span><strong>1-Page Recruiter &amp; ATS CV</strong> &mdash; Ready to export (Margins: None, uncheck Headers/Footers).</span>
     <div class="toolbar-actions">
-      <a href="index.html" class="btn-back">&larr; Back to Portfolio</a>
+      <a href="index.html" class="btn-back">&larr; Portfolio</a>
+      <button type="button" class="btn-toggle" onclick="document.body.classList.toggle('hide-photo')">Show / Hide Photo</button>
       <button type="button" class="btn-print" onclick="window.print()">Print / Save as PDF</button>
     </div>
   </div>
@@ -231,16 +262,19 @@
   <main class="cv-sheet">
     <!-- Header -->
     <header class="cv-header">
-      <h1 class="cv-name">DANG DUC ANH</h1>
-      <p class="cv-headline">Fresher Technical Business Analyst | UI/UX Design &amp; ReactJS Capability</p>
-      <p class="cv-contact">
-        Ho Chi Minh City, Vietnam &nbsp;|&nbsp;
-        <span class="placeholder">[FILL IN: Email]</span> &nbsp;|&nbsp;
-        <span class="placeholder">[FILL IN: Phone]</span> &nbsp;|&nbsp;
-        <span class="placeholder">[FILL IN: LinkedIn URL]</span> &nbsp;|&nbsp;
-        <a href="https://danh0999.github.io">danh0999.github.io</a> &nbsp;|&nbsp;
-        <a href="https://github.com/danh0999">github.com/danh0999</a>
-      </p>
+      <div class="cv-header-main">
+        <h1 class="cv-name">ĐẶNG ĐỨC ANH</h1>
+        <p class="cv-headline">Fresher Technical Business Analyst | UI/UX Design &amp; ReactJS Capability</p>
+        <p class="cv-contact">
+          Ho Chi Minh City, Vietnam &nbsp;|&nbsp;
+          <a href="mailto:dangducanh999@gmail.com">dangducanh999@gmail.com</a> &nbsp;|&nbsp;
+          <a href="tel:+84866896570">(+84) 866 896 570</a><br />
+          Portfolio: <a href="https://danh0999.github.io">danh0999.github.io</a> &nbsp;|&nbsp;
+          GitHub: <a href="https://github.com/danh0999">github.com/danh0999</a> &nbsp;|&nbsp;
+          PTE Certificate: <a href="https://danh0999.github.io/assets/pte-score-report.pdf">Score Report (Code: 4d26007FND)</a>
+        </p>
+      </div>
+      <img src="assets/avatar.jpg" alt="Đặng Đức Anh portrait" class="cv-avatar" />
     </header>
 
     <!-- Professional Summary -->
@@ -252,7 +286,7 @@
         requirements, user experience modeling, and engineering execution&mdash;capable of defining structured
         business rules, user flows, and use case diagrams, building responsive ReactJS interfaces integrated with
         RESTful APIs, and validating end-to-end usability through UAT. Strong English proficiency
-        (<strong>PTE Academic 60 / IELTS 6.5 equiv.</strong>) and cross-cultural exposure in Japan (FJA Academy).
+        (<strong>PTE Academic 60 &mdash; Reading 70, Speaking 64 / IELTS 6.5 equiv.</strong>) and 3-month immersion in Japan (FJA Academy).
       </p>
     </section>
 
@@ -291,7 +325,7 @@
           <span class="entry-title">Hokori &mdash; AI-Powered Japanese Learning Web Application (Graduation Capstone)</span>
           <span class="entry-date">Fall 2025</span>
         </div>
-        <div class="entry-sub">Role: Business Analyst &amp; Front-end Developer (ReactJS) &nbsp;|&nbsp; 5-Member Team &nbsp;|&nbsp; github.com/danh0999/Hokori-Learning</div>
+        <div class="entry-sub">Role: Business Analyst &amp; Front-end Developer (ReactJS) &nbsp;|&nbsp; 5-Member Team &nbsp;|&nbsp; <a href="https://github.com/danh0999/Hokori-Learning">github.com/danh0999/Hokori-Learning</a></div>
         <ul>
           <li><strong>Requirements &amp; Business Rules:</strong> Analyzed functional requirements and mapped end-to-end flows (BPMN, 5-role Screens Flow, UCD, ERD) across <strong>Learner</strong> and <strong>Admin</strong> portals; defined AI Package shared-quota architecture and CRUD immutability/fairness rules alongside 26 Learner business rules.</li>
           <li><strong>Front-end &amp; RESTful API Execution:</strong> Built responsive ReactJS + Redux Toolkit interfaces for AI Kaiwa (audio recording &amp; WebM-to-WAV conversion), AI Conversation/Analysis, JLPT Mock Tests (Multiple Choice, Reading, Listening, Result), Flashcards &amp; Streak Tracking, and Admin AI Package CRUD integrated with JWT-authenticated RESTful APIs.</li>
@@ -316,7 +350,7 @@
           <span class="entry-title">RatioPack Batch Pro &mdash; Etsy Print Ratio Batch Processor (Independent Product)</span>
           <span class="entry-date">2026</span>
         </div>
-        <div class="entry-sub">Role: Solo Product Designer &amp; Builder (ReactJS, TypeScript) &nbsp;|&nbsp; Live: ratiopack-batch-pro.vercel.app</div>
+        <div class="entry-sub">Role: Solo Product Designer &amp; Builder (ReactJS, TypeScript) &nbsp;|&nbsp; Live: <a href="https://ratiopack-batch-pro.vercel.app/">ratiopack-batch-pro.vercel.app</a></div>
         <ul>
           <li><strong>Business Logic &amp; Entitlement Rules:</strong> Shipped a live client-side 300 DPI batch print-ratio utility with Free/Pro licensing (server-signed tokens, activation caps, 7-day re-verification, and automatic refund/chargeback revocation via Gumroad).</li>
           <li><strong>Conversion &amp; Usability Optimization:</strong> Iterated on user drop-off points by preserving free output on paywall close, adding live crop ratio previews, plain-language error handling, and an Etsy Print Size Guide.</li>
@@ -343,8 +377,8 @@
     <section>
       <h2>Certifications &amp; Languages</h2>
       <ul class="skills-list">
-        <li><strong>Certifications:</strong> PTE Academic &mdash; Overall 60 (2026; IELTS 6.5 equivalent); Certificate of Completion in Japanese Language Course &mdash; FPT Japan Academy (2024).</li>
-        <li><strong>Languages:</strong> English (Professional Working Proficiency; PTE 60, English-medium IT curriculum) &nbsp;|&nbsp; Japanese (Intermediate coursework B2.1 at FPT University; JLPT N4 equivalent, studying for N3).</li>
+        <li><strong>PTE Academic &mdash; Overall 60</strong> (Reading 70, Speaking 64, Listening 60, Writing 57; IELTS 6.5 equiv.) &nbsp;|&nbsp; Score Report Code: <strong>4d26007FND</strong> (Valid until 11/2028; verify at <a href="https://mypte.pearsonpte.com">mypte.pearsonpte.com</a> or <a href="https://danh0999.github.io/assets/pte-score-report.pdf">view PDF</a>).</li>
+        <li><strong>Japanese Language Course Certificate</strong> &mdash; FPT Japan Academy (2024) &nbsp;|&nbsp; <strong>Languages:</strong> English (Professional Working Proficiency) &middot; Japanese (Intermediate B2.1 / JLPT N4 equiv., studying for N3).</li>
       </ul>
     </section>
   </main>

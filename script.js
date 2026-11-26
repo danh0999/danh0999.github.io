@@ -43,7 +43,7 @@
   const lightboxClose = document.getElementById('lightbox-close');
 
   if (lightbox && lightboxImg && lightboxCaption) {
-    document.querySelectorAll('.artifact-trigger').forEach((btn) => {
+    document.querySelectorAll('.artifact-trigger, .artifact-trigger-inline').forEach((btn) => {
       btn.addEventListener('click', () => {
         const src = btn.getAttribute('data-lightbox');
         const caption = btn.getAttribute('data-caption') || '';
