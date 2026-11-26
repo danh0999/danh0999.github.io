@@ -1,4 +1,4 @@
-# ĐẶNG ĐỨC ANH (DANG DUC ANH)
+# DANG DUC ANH
 **Fresher Technical Business Analyst | UI/UX Design & ReactJS Capability**
 Ho Chi Minh City, Vietnam | dangducanh999@gmail.com | (+84) 866 896 570 | Portfolio: https://dang-duc-anh-portfolio.vercel.app | GitHub: https://github.com/danh0999 | PTE Score Report: https://dang-duc-anh-portfolio.vercel.app/assets/pte-score-report.pdf (Code: 4d26007FND)
 
