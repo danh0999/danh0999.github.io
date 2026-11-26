@@ -28,7 +28,7 @@ Software Engineering graduate from FPT University (9.4/10 in UI/UX Design) targe
 
 ### Hokori – AI-Powered Japanese Learning Web Application (Graduation Capstone) | Fall 2025
 *Role: Business Analyst & Front-end Developer (ReactJS) | 5-Member Team | https://github.com/danh0999/Hokori-Learning*
-- **Requirements & Business Rules:** Analyzed functional requirements and mapped end-to-end flows (BPMN, 5-role Screens Flow, UCD, ERD) across Learner and Admin portals; defined AI Package shared-quota architecture and CRUD immutability/fairness rules alongside 26 Learner business rules.
+- **Requirements & Business Rules:** Collaborated on functional requirement analysis, user/admin flows (BPMN, Screens Flow, Use Case), and business rules—implementing the Shared AI Quota architecture, 5 strict CRUD immutability/fairness rules for AI Packages, and Learner validation rules across portals.
 - **Front-end & RESTful API Execution:** Built responsive ReactJS + Redux Toolkit interfaces for AI Kaiwa (audio recording & WebM-to-WAV conversion), AI Conversation/Analysis, JLPT Mock Tests (Multiple Choice, Reading, Listening, Result), Flashcards & Streak Tracking, and Admin AI Package CRUD integrated with JWT-authenticated RESTful APIs.
 - **UI Alignment & UAT:** Conducted end-to-end usability testing from an end-user perspective to verify API data accuracy, quota gating, and business logic compliance prior to final delivery.
 
