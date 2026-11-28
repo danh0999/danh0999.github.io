@@ -1,6 +1,6 @@
 # DANG DUC ANH
 **Fresher Technical Business Analyst | Business Rules, Use Cases & User Flows | ReactJS Background**
-Ho Chi Minh City, Vietnam | dangducanh999@gmail.com | (+84) 866 896 570 | LinkedIn: https://www.linkedin.com/in/dang-duc-anh-se/ | Portfolio: https://dang-duc-anh-portfolio.vercel.app | GitHub: https://github.com/danh0999 | PTE Score Report: https://dang-duc-anh-portfolio.vercel.app/assets/pte-score-report.pdf (Code: 4d26007FND)
+Ho Chi Minh City, Vietnam | dangducanh999@gmail.com | (+84) 866 896 570 | LinkedIn: https://www.linkedin.com/in/dang-duc-anh-se/ | Portfolio: https://dang-duc-anh-portfolio.vercel.app | GitHub: https://github.com/danh0999
 
 ---
 
@@ -20,7 +20,8 @@ Software Engineering graduate from FPT University with a Front-end background, t
 ## SKILLS
 - **Business Analysis & Product:** Requirement Analysis, SRS & Feature Specifications, Use Case Diagrams, Flowcharts, User & Admin Flows, Business Rules, Functional / System Testing, User Guides.
 - **UI/UX & Modeling:** UI/UX Design, Wireframing, Figma, Draw.io, Basic UML, ERD Reading.
-- **Front-end & Technical:** ReactJS, JavaScript, HTML/CSS, Redux Toolkit, RESTful API Integration, Postman, Database Fundamentals, Agile/Scrum, SDLC, Git/GitHub.
+- **Front-end & Technical:** ReactJS, JavaScript, TypeScript, HTML/CSS, Redux Toolkit, RESTful API Integration, Postman, Database Fundamentals, Agile/Scrum, SDLC, Git/GitHub.
+- **AI-Assisted Workflow:** Requirement Research, Edge-Case Analysis & Rapid UI Prototyping with Claude, ChatGPT & AI Coding Agents (verified against business rules & manual testing).
 
 ---
 
@@ -39,7 +40,7 @@ Software Engineering graduate from FPT University with a Front-end background, t
 
 ### RatioPack Batch Pro – Etsy Print Ratio Batch Processor (Independent Product) | 2026
 *Role: Solo Product Designer & Builder (ReactJS, TypeScript) | Live: https://ratiopack-batch-pro.vercel.app/*
-- **Business Logic & Entitlement Rules:** Shipped a live client-side 300 DPI batch print-ratio utility with Free/Pro licensing (server-signed tokens, activation caps, 7-day re-verification, and automatic refund/chargeback revocation via Gumroad).
+- **Business Logic & Entitlement Rules:** Shipped a live client-side 300 DPI batch print-ratio utility with Free/Pro licensing (ECDSA server-signed tokens, 10-device activation cap, 7-day re-verification, and automatic refund/chargeback revocation via Gumroad).
 - **Conversion & Usability Optimization:** Iterated on user drop-off points by preserving free output on paywall close, adding live crop ratio previews, plain-language error handling, and an Etsy Print Size Guide.
 
 ---
