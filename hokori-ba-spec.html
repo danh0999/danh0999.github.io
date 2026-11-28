@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hokori — Sample Business Analysis Specification &amp; UAT Pack | Dang Duc Anh</title>
+  <title>Hokori — Sample Business Analysis Specification &amp; Test Scenarios | Dang Duc Anh</title>
   <style>
     @page {
       size: A4;
@@ -236,7 +236,7 @@
 </head>
 <body>
   <div class="toolbar">
-    <span><strong>Sample BA Artifact (2 Pages)</strong> &mdash; Real business rules &amp; UAT cases from Hokori Capstone.</span>
+    <span><strong>Sample BA Artifact (2 Pages)</strong> &mdash; Real business rules &amp; test scenarios from Hokori Capstone.</span>
     <div class="toolbar-actions">
       <a href="index.html#hokori" class="btn-back">&larr; Back to Portfolio</a>
       <button type="button" class="btn-print" onclick="window.print()">Print / Save as PDF</button>
@@ -246,20 +246,20 @@
   <main class="doc-sheet">
     <!-- Document Header -->
     <header class="doc-header">
-      <p class="doc-kicker">Business Analysis Artifact &mdash; Feature Specification &amp; UAT Pack</p>
+      <p class="doc-kicker">Business Analysis Artifact &mdash; Feature Specification &amp; Test Scenarios</p>
       <h1 class="doc-title">Hokori: AI Package Governance, Shared Quota &amp; Learner Rules</h1>
       <table class="meta-table">
         <tr>
           <td class="meta-label">Project</td>
           <td>Hokori &mdash; AI-Powered Japanese Learning Web Platform (Capstone FA25SE183)</td>
           <td class="meta-label">Author / Role</td>
-          <td>Dang Duc Anh (BA &amp; Front-end)</td>
+          <td>Dang Duc Anh (BA documentation &amp; Front-end; team document)</td>
         </tr>
         <tr>
           <td class="meta-label">Scope</td>
           <td>Learner AI Quota, Admin AI Package CRUD, JLPT &amp; Enrollment Guards</td>
           <td class="meta-label">Document Note</td>
-          <td>Structured in English for Portfolio review from original Dec 2025 Capstone rules &amp; executed UAT flows</td>
+          <td>Structured in English for Portfolio review from the original Capstone business rules, with test scenarios derived from them</td>
         </tr>
       </table>
     </header>
@@ -369,11 +369,11 @@
     </div>
 
     <!-- Section 4 -->
-    <h2>4. Representative End-to-End UAT Test Cases (Executed Prior to Delivery)</h2>
+    <h2>4. Representative Test Scenarios (Derived from the Business Rules)</h2>
     <p>
-      Executed from an end-user perspective across ReactJS screens and JWT-authenticated RESTful APIs
+      Written from an end-user perspective across ReactJS screens and JWT-authenticated RESTful APIs
       (<code>/api/admin/ai-packages</code>, <code>/api/jlpt/tests/*</code>, <code>/api/flashcards/sets/*</code>)
-      to verify business logic accuracy and UI consistency.
+      to check business logic accuracy and UI consistency.
     </p>
 
     <table class="spec">
@@ -388,56 +388,56 @@
       </thead>
       <tbody>
         <tr>
-          <td><code>UAT-01</code></td>
+          <td><code>TC-01</code></td>
           <td>AI Quota<br/>(BR-LR-17)</td>
           <td>Learner runs 1 AI Kaiwa session and 1 AI Sentence Analysis back-to-back.</td>
           <td>Shared quota counter decrements by 2 total; both Header and <code>AiQuotaOverview</code> stay synchronized.</td>
           <td><span class="badge-pass">PASS</span></td>
         </tr>
         <tr>
-          <td><code>UAT-02</code></td>
+          <td><code>TC-02</code></td>
           <td>AI Quota<br/>(BR-LR-18)</td>
           <td>Learner with 0 remaining credits clicks &ldquo;Analyze Sentence&rdquo;.</td>
           <td>Request blocked before AI call; UI displays quota-exhausted notice and opens <code>AiPackageModal</code>.</td>
           <td><span class="badge-pass">PASS</span></td>
         </tr>
         <tr>
-          <td><code>UAT-03</code></td>
+          <td><code>TC-03</code></td>
           <td>Admin CRUD<br/>(RULE-01)</td>
           <td>Admin attempts to edit price of an <code>ACTIVE</code> package with <code>purchase_count = 1</code>.</td>
           <td>Edit rejected by both UI guard and API validation; original buyer terms remain unchanged.</td>
           <td><span class="badge-pass">PASS</span></td>
         </tr>
         <tr>
-          <td><code>UAT-04</code></td>
+          <td><code>TC-04</code></td>
           <td>Admin CRUD<br/>(RULE-04)</td>
           <td>Admin deletes an <code>INACTIVE</code> draft package with <code>purchase_count = 0</code> &amp; <code>usage_count = 0</code>.</td>
           <td>Soft-delete succeeds; package removed from active catalog without affecting other packages.</td>
           <td><span class="badge-pass">PASS</span></td>
         </tr>
         <tr>
-          <td><code>UAT-05</code></td>
+          <td><code>TC-05</code></td>
           <td>JLPT Test<br/>(BR-LR-13)</td>
           <td>Learner starts test (<code>POST /start</code>), changes an answer on Q3, then submits.</td>
           <td><code>POST /answers</code> overwrites previous Q3 choice; <code>GET /my-result</code> reflects updated score accurately.</td>
           <td><span class="badge-pass">PASS</span></td>
         </tr>
         <tr>
-          <td><code>UAT-06</code></td>
+          <td><code>TC-06</code></td>
           <td>Exam Integrity<br/>(BR-LR-20)</td>
           <td>Learner enters active timed JLPT mock test session.</td>
           <td>AI assistant sidebar/actions are unavailable during active exam session to prevent cheating.</td>
           <td><span class="badge-pass">PASS</span></td>
         </tr>
         <tr>
-          <td><code>UAT-07</code></td>
+          <td><code>TC-07</code></td>
           <td>Flashcards<br/>(BR-LR-25)</td>
           <td>Learner reviews cards today and checks dashboard metrics.</td>
           <td><code>GET /api/flashcards/sets/dashboard/me</code> updates <code>reviewedToday</code> and increments <code>streakDays</code>.</td>
           <td><span class="badge-pass">PASS</span></td>
         </tr>
         <tr>
-          <td><code>UAT-08</code></td>
+          <td><code>TC-08</code></td>
           <td>Enrollment<br/>(BR-LR-04/10)</td>
           <td>Learner cancels payment midway during checkout for a paid course.</td>
           <td>Order marked failed/cancelled; course remains locked and does not appear in <code>MyCourses</code>.</td>
