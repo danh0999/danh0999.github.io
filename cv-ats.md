@@ -52,5 +52,5 @@ Software Engineering graduate from FPT University with a Front-end background, t
 
 ## CERTIFICATIONS & LANGUAGES
 - **PTE Academic – Overall 60** (Reading 70, Speaking 64, Listening 60, Writing 57; IELTS 6.5 equivalent) | Score Report Code: **4d26007FND** (Valid until 02 Nov 2028; verify at https://mypte.pearsonpte.com).
-- **Certificate of Completion in Japanese Language Course** – FPT Japan Academy (2024).
+- **Certificate of Completion in Japanese Language Course** – FPT Japan Academy (29 July 2024, No. FU240502; https://dang-duc-anh-portfolio.vercel.app/assets/fja-certificate.pdf).
 - **Languages:** English (Upper-intermediate; PTE 60) | Japanese (Basic; completed 5 Japanese courses at FPT University and the 3-month FJA course; JLPT not yet taken, preparing for N3).
